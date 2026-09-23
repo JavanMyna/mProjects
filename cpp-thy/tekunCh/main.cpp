@@ -14,6 +14,8 @@ int main() {
 
 	if (permSay == "go tekun!") {
 		std::cout << "Go! Go! Go!";
+}	else if (permSay == "waka-waka! 3,4!") {
+		std::cout << "Waka-waka! *clap* *clap*\nWiki-wiki! *clap* *clap*\nWaka-waka! *clap* *clap*\nWiki-wiki! *clap* *clap*\nHang ingat kami siapa!\nKami tak heran siapa!\nSwipe swipe swipe habis!";
 } else {
 		std::cout << "The silence echoes...";
 }
