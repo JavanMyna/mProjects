@@ -1,0 +1,2 @@
+> 9:53pm 04/10/2026
+Lessgooo fred, i think this is our food for now. I think I wanna work on math more than this because I think the math is a little complicated. Maybe i should note to yk, connect them a little before sleeping.
