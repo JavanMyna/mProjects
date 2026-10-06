@@ -7,7 +7,7 @@ int main() {
     const double PI = 3.14159;
     double area, radius;
 
-    cout << "This program calculates the area of a circle.\n";
+    cout << "This program calculates the area of a circle.\n"; // haaa, is it in metre or centimetres
     cout << "What is the radius of the circle? ";
     cin >> radius;
     area = PI * pow(radius, 2.0);
