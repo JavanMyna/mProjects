@@ -42,6 +42,10 @@ The pattern used throughout (see `cpp-thee/gradeCheck/gradeCheck.cpp`):
 ```sh
 g++ -Wall -Wextra -std=c++20 gradeCheck.cpp -o gradeCheck.exe && ./gradeCheck.exe
 ```
+or
+```sh
+g++ -Wall -Wextra -std=c++20 gradeCheck.cpp -o gradeCheck.exe; if ($?) {./gradeCheck.exe}
+```
 
 - `-Wall -Wextra` enable extra warnings (catch hidden bugs).
 - `-std=c++20` selects the modern language standard.

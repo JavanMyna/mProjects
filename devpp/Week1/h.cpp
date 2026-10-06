@@ -5,16 +5,16 @@ int main() {
     char letter;
     int i;
     // to do a for loop, its for (start; condition; update) {} scu, saya cayang u :3
-    /*for (i=0; i<127; i++) {
+    for (i=0; i<127; i++) {
         letter = i; 
         cout << i << " : " << letter << endl;
-    }*/
+    }
 
-    
+    /*
     letter = 65; // woah thats cool, this outputs as A
     cout << letter << endl;
     letter = 66; //and this output as B
-    cout << letter << endl;
+    cout << letter << endl;*/
     return 0;
 }
 
