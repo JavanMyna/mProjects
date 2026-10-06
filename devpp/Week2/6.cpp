@@ -2,6 +2,7 @@
 using namespace std;
 
 int main() {
-	cout << "The ";
-	return 0;
+    double numerator, denominator;
+
+    return 0;
 }
