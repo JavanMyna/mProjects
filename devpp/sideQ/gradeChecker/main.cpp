@@ -8,7 +8,7 @@ int main() {
 	string nameUser;
 	int subject1, subject2, subject3;
 
-	"================================/n      STUDENT GRADE ANALYZER/n================================";
+	"================================\n      STUDENT GRADE ANALYZER\n================================";
 
 	cout << "Enter your name: ";
 	cin >> nameUser;
@@ -21,7 +21,7 @@ int main() {
 	cout << "\nSubject 3: ";
 	cin >> subject3;
 
-    int totalMarks = subject1 + subject2 + subject3;
+	int totalMarks = subject1 + subject2 + subject3;
 	double avgMarks = totalMarks / 3;
 
 //I know these uses <iomanip> but aiyaaa 
