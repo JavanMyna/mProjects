@@ -21,7 +21,7 @@ int main() {
 	cout << "\nSubject 3: ";
 	cin >> subject3;
 
-    int totalMarks = subject1 + subject2 + subject3;
+	int totalMarks = subject1 + subject2 + subject3;
 	double avgMarks = totalMarks / 3;
 
 //I know these uses <iomanip> but aiyaaa 
