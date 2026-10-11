@@ -8,7 +8,7 @@ int main() {
 	string nameUser;
 	int subject1, subject2, subject3;
 
-	"================================/n      STUDENT GRADE ANALYZER/n================================";
+	cout << "================================\n      STUDENT GRADE ANALYZER\n================================\n";
 
 	cout << "Enter your name: ";
 	cin >> nameUser;
@@ -26,8 +26,8 @@ int main() {
 
 //I know these uses <iomanip> but aiyaaa 
 // input output manipulation
-	cout << "/n================================/n           RESULTS/n================================" << endl;
-	cout << "Name: " << nameUser << endl;
+	cout << "\n================================\n           RESULTS\n================================" << endl;
+	cout << "\nName: " << nameUser << endl;
 	cout << "Total marks: " << totalMarks << "/300" << endl;
 	cout << "Average: " << avgMarks << endl;
 	cout << "Highest  mark: " << endl; 
