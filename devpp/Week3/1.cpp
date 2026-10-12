@@ -6,6 +6,7 @@ using namespace std;
 
 int main() {
 	int cookieAte;
+	int cookieCalory;
 	
 	
 
