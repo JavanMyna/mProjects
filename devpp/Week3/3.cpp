@@ -17,8 +17,9 @@ int main() {
     cout << "Enter IC: ";
     cin >> userIC;
 
-    firstTwoStr = userIC.substr(0, 2); //Whats substr for usually. Substract?
-    yearBorn_user = stoi(firstTwoStr); //first time using stoi here
+    firstTwoStr = userIC.substr(0, 2); //Whats substr for usually. Substract? > no fred, its substring
+    yearBorn_user = stoi(firstTwoStr); //first time using stoi here > Yes it means string to integer s to i
+    
 
     //soooo we dont take it as integer huh. Later baru integer
     
