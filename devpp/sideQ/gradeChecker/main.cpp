@@ -7,9 +7,8 @@ using namespace std;
 int main() {
 	string nameUser;
 	int subject1, subject2, subject3;
-
+//why are u red
 	cout << "================================\n      STUDENT GRADE ANALYZER\n================================\n";
-
 	cout << "Enter your name: ";
 	cin >> nameUser;
 
