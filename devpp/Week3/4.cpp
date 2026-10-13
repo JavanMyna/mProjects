@@ -8,13 +8,14 @@ The temperature at sea level (for reference) in Fahrenheit.
 The temperature at 1000, 2000 and 3000m
 The temperature at the top of Mount Everest (8.848 m)
 The height at which the temperature is 0°C.
+
 As an additional exercise, show also the temperatures in degrees Fahrenheit and the height
 in feet. To convert temperatures in degrees Celcius to degrees Fahrenheit, multiply by 1.8
 (or 9/5) and add 32; to convert meters to feet, multiply by 3.28
 
 *///850am 13oct2026
 //input : temperature(at sea level, in celsius)
-//process : (converts cels to Fahr), (calculates temperature at different height) (calc temperature at mount everest) (calculates height where temperature is 0)
+//process : (/converts cels to Fahr), (/calculates temperature at different height) (/calc temperature at mount everest) (/calculates height where temperature is 0)
 //input : displays the 4 different results
 
 #include <iostream>
@@ -32,11 +33,12 @@ int main() {
     tempFahr = convert_to_Fahr(tempCel);
 
     // tempValue = actualHeight * ( constTemp / constHeight ) ; constHeight can be cut out since its 1
-    temp_Hgt_1k = 1 * 5;  
-    temp_Hgt_2k = 2 * 5;
-    temp_Hgt_3k = 3 * 5; 
+    temp_Hgt_1k = tempCel - 1 * 5;  
+    temp_Hgt_2k = tempCel - 2 * 5;
+    temp_Hgt_3k = tempCel - 3 * 5; 
     temp_mtEverest = 8.848 * 5;
     //hgt_temp_0 = 8.848 / 0; wthhh thats illegal!
+    hgt_temp_0 = tempCel / 5;  //I think my math is wrong here. It outputs as 4m
 
     cout << "The temperature at sea level in Fahrenheit: " << tempFahr << "F" << endl;
     cout << "The temperature at...\n1000m: " << temp_Hgt_1k << "C\n2000m: " << temp_Hgt_2k << "C\n3000m: " << temp_Hgt_3k << "C\n"; 
