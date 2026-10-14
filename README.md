@@ -19,9 +19,13 @@ mProjects/
 │   ├── tekunCh/             getline() + string comparison
 │   ├── point/               References and pointers (notes, partly TODO)
 │   └── eep/                 std::this_thread::sleep_for demo
-├── devpp/                   C++ practice
+├── devpp/                   C++ practice, one folder per week plus side quests
 │   ├── Week1/               First programs: Hello World, name/city, pointers
-│   └── quite/               Odd/even loop over numbers 1–10
+│   ├── Week2/               Modulo, integer division, static_cast, setw, rand
+│   ├── Week3/               Strings (substr/stoi), functions, multi-step math
+│   ├── sideQ/               Self-set programs: quite, 2fCalc, rectCalc,
+│   │                        miniATM, gradeChecker, numberMan, staticCas
+│   └── library/             Experiments: stitch (vector+string vs Python)
 ├── inactive/                Other languages, not currently active
 │   ├── py-like/             Python (simple greet, waka-waka output)
 │   ├── go-go/               Go (age input, print, imports)
