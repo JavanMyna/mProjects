@@ -39,14 +39,25 @@ a negative number, then Joe lost money on the transaction.)
 using namespace std;
 
 int main() {
-    double totalPurchase, comissionPaid_buy,
-        
-    totalPurchase = 1000 * 45.50
-    commissionPaid_buy = totalPurchase * 0.02
-    totalSold = 1000 * 56.90
-    commissionPaid_sold = totalSold * 0.02
+	double totalPurchase, commissionPaid_buy, totalSold, commissionPaid_sold, profit;
 
-    return 0;
+	totalPurchase = 1000 * 45.50;
+	commissionPaid_buy = totalPurchase * 0.02;
+	totalSold = 1000 * 56.90;
+	commissionPaid_sold = totalSold * 0.02;
+	profit = totalSold - totalPurchase - commissionPaid_buy - commissionPaid_sold;
+
+	cout << "Amount of money Joe paid for the stock: RM" << totalPurchase << endl;
+	cout << "Amount of commission Joe paid his broker when he bought the stock: RM" << commissionPaid_buy << endl;
+	cout << "Amount that Joe sold the stock for: RM" << totalSold << endl;
+	cout << "Amount of commission Joe paid his broker when he sold the stock: RM" << commissionPaid_sold << endl;
+	cout << "Amount of profit after selling and paying two commissions to his broker: RM" << profit << endl;
+	
+	if (profit < 0) {
+		cout << "It seems like Joe lost some quite of money on the transaction" << endl;
+	}
+
+	return 0;
 }
 
 
