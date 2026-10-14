@@ -2,6 +2,9 @@
 #include <cstdlib> //wooo new library, wahts this, basically unlocking newer tools like rand() exit() atoi() yeah
 #include <ctime> //Soo basically like import time in python
 
+//so its different than <cmath> huh
+// <random>
+
 using namespace std;
 
 int main() {
