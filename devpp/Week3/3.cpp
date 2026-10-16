@@ -33,3 +33,6 @@ int main() {
     cout << "It is 2026 currently...\nYour age is " << age << " years old!";
     return 0;
 }
+
+//apparently dr uses divide by 1 with 10 zeros. 
+// because int automatically ignores decimal, wouldnt it round up or down? no because it

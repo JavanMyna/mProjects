@@ -36,7 +36,7 @@ int main() {
     temp_Hgt_1k = tempCel - 1 * 5;  
     temp_Hgt_2k = tempCel - 2 * 5;
     temp_Hgt_3k = tempCel - 3 * 5; 
-    temp_mtEverest = 8.848 * 5;
+    temp_mtEverest = tempCel - 8.848 * 5;
     //hgt_temp_0 = 8.848 / 0; wthhh thats illegal!
     hgt_temp_0 = tempCel / 5;  //I think my math is wrong here. It outputs as 4m
 
@@ -54,3 +54,12 @@ double convert_to_Fahr(double celsiusValue) {
 }
 
 //9:13am fin attempt
+
+//diff:
+/*
+Oh yaa i can just convert from m to feet pula
+
+astaga i couldve just used constant instead of separate function, it be better
+
+wtffffff its divide by 5 lah not times. C yg di atas
+*/
