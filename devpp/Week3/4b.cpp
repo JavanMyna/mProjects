@@ -26,7 +26,11 @@ using namespace std;
 double convert_to_Fahr(double celsiusValue); //why cant i put auto there
 
 int main() {
-    double tempCel, tempFahr, temp_Hgt_1k, temp_Hgt_2k, temp_Hgt_3k, temp_mtEverest, tempF_mtEverest, hgt_temp_0, hgtF_temp_0F;
+    double tempCel, tempFahr, 
+    temp_Hgt_1k, temp_Hgt_2k, temp_Hgt_3k, 
+    temp_mtEverest, tempF_mtEverest, 
+    hgt_temp_0, hgtF_temp_0F;
+    
     const double M_TO_FEET = 3.28;
 
     cout << "Enter temperature value in Celsius at sea level: ";
@@ -44,7 +48,7 @@ int main() {
     temp_mtEverest = tempCel - 8.848 * 5;
     tempF_mtEverest = convert_to_Fahr(temp_mtEverest) * 1000;
     hgt_temp_0 = tempCel / 5;  
-    hgtF_temp_0F = (convert_to_Fahr(tempCel) / 5) * M_TO_FEET;
+    hgtF_temp_0F = tempFahr / 2.7;
     tempF_Hgt_1k = convert_to_Fahr(temp_Hgt_1k); 
     tempF_Hgt_2k = convert_to_Fahr(temp_Hgt_2k); 
     tempF_Hgt_3k = convert_to_Fahr(temp_Hgt_3k); 
