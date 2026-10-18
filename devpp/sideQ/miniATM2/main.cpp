@@ -1,43 +1,49 @@
+//Okay im reusing this from miniATM folder, I just wanna practice my iomanip and static cast
+//9:10pm, lets stop our thing at 9:30pm
 
-// First i need to find out how to loop this thing. I think i need to include <iomanip> so i can exit() >> noneeeeed
-
-// Im gonna do what i did in python back then
-
-// loop > while (true) {} and use break to exit.
-// features : (Check balance) (Deposit) (Withdraw) (ex
-
-// Input : User's choice of action
-// Process :
-// Output :
+//===============================================
+//Im planning for my loyalty_point function
+//input : user's withdrawalValue
+//process : (every RM10 in wV, point =+ 1, use int to discard fractions )
+//output : displays "Loyalty points earned: 12"
+//================================================
 
 #include <iostream>
 #include <string>
+#include <iomanip>
+
 using namespace std;
 
 double deposit(double balance);
 double withdraw(double balance);
 
 int main() {
-    int userChoice;
+    int userChoice, points = 0, pointsEarned;
     double balance = 1000.00;
 
     while (true) {
 
-        cout << "\n\n===== MYNBANK ATM =====\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Exit\nEnter number(1-4): ";
+        cout << setw(12) << "\n===== MYNBANK ATM =====\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Exit\nEnter number(1-4): "<< endl;
         cin >> userChoice;
         if (userChoice == 4) {
             cout << "\nThank you for using MynBank!" << endl;
             break;
         } else if (userChoice == 1) {
-            cout << "\nBalance: RM" << balance;
+            cout << setw(10) << "\nBalance: RM" << fixed << setprecision(2) << balance << endl;
+            cout << setw(10) << "Current Loyalty points: " << points << endl;
         } else if (userChoice == 2) {
             balance = deposit(balance);
-            cout << "\nNew balance: RM" << balance;
+            cout << setw(10) << "\nNew balance: RM" << fixed << setprecision(2) << balance << endl;
         } else if (userChoice == 3) {
-            balance = withdraw(balance); //why is my withdraw here red
-            cout << "\nNew balance: RM" << balance;
+            double withdrawValue = withdraw(balance);
+            balance = balance - withdrawValue;
+            pointsEarned = static_cast<int>(withdrawValue / 10);
+            points = points + pointsEarned;
+            cout << setw(10) << "\nNew balance: RM" << fixed << setprecision(2) << balance << endl;
+            cout << setw(10) << "Loyalty points earned: " << pointsEarned << endl;
+            cout << setw(10) << "Current Loyalty points: " << points << endl;
         } else {
-            cout << "\nNot an option. Please enter numerical value (1-4)" << endl;
+            cout << setw(10) << "\nNot an option. Please enter numerical value (1-4)" << endl;
         }
 
     }
@@ -61,10 +67,12 @@ double withdraw(double balance) {
 
     if (withdrawValue < 0) {
         cout << "\nInvalid amount.\n";
-        return balance;
+        return withdrawValue = 0;
     } else if (withdrawValue > balance) {
         cout << "\nAction cannot be done: Insufficient funds to withdraw.\n";
-        return balance;
+        return withdrawValue = 0;
     }
-    return balance - withdrawValue;
+    return withdrawValue;
 }
+
+//9:31pm yeyey fin
