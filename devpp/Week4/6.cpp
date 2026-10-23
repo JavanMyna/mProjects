@@ -15,23 +15,17 @@ int main() {
     cout << "Enter your first color(all lowercase): ";
     cin >> color2;    
 
-    if (color1=="red" && color2=="blue") {
-        finalColor="purple";
-    }
-    else if (color1=="blue" && color2=="red") {
+    if (color1=="red" && color2=="blue" || color1=="blue" && color2=="red") {
         finalColor="purple";
     } 
-    else if (color1=="red" && color2=="yellow") {
+    else if (color1=="red" && color2=="yellow" || color1=="yellow" && color2=="red") {
         finalColor="orange";
     }
-    else if (color1=="yellow" && color2=="red") {
-        finalColor="orange";
-    }
-    else if (color1=="blue" && color2=="yellow") {
+    else if (color1=="blue" && color2=="yellow" || color1=="yellow" && color2=="blue") {
         finalColor="green";
     }
-    else if (color1=="yellow" && color2=="blue") {
-        finalColor="green";
+    else if (color1 == color2) {
+        finalColor=color1;
     }
     else {
         cout << "The color u put isnt a primary color!";
@@ -41,3 +35,10 @@ int main() {
     cout << "Okay so...after mixing color " << color1 << " and color " << color2 << ":\nYou get the color " << finalColor << "!" << endl;
     return 0;
 }//fin at 11:03am yeys
+
+
+//Okay so I didnt think of if we mix two same colors together. 
+
+//Oh i can make it much shorter by using "||" or to join them together like if it just switch place
+
+//I gotta make it a habit to catch error from the first 1st if statement

@@ -41,3 +41,5 @@ int main() {
 }
 
 //Sheesh i finished it at 11:29am but omg its so ugly HAHAHA
+
+//so she used boolean isCorrect in here, sooo programmer core

@@ -7,7 +7,17 @@ output:
 #include <iostream>
 using namespace std;
 
-double askArea();
+double askArea() {
+    double length, width;
+
+    cout << "Enter length (m): ";
+    cin >> length;
+
+    cout << "Enter width (m): ";
+    cin >> width;
+    double area = length * width;
+    return area;
+}
 
 int main() {
     double rect1, rect2;
@@ -30,6 +40,7 @@ int main() {
     return 0;
 }
 
+/*
 double askArea() {
     double length, width;
 
@@ -41,5 +52,7 @@ double askArea() {
     double area = length * width;
     return area;
 }
-
+*/
 // 4:12pm yey 12 mins
+
+//WOWWW so u can actually run it beforehand. Oh ya in exams, dont use these ah 

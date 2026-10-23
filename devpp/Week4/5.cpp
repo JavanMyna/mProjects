@@ -1,3 +1,10 @@
+/*
+input: weight, height
+process: using the formula of BMI to find itself, use if/else-if statements to find the user's lifestyle 
+output: display
+*/
+
+
 #include <iostream>
 #include <cmath>
 using namespace std;
