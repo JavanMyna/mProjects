@@ -1,5 +1,10 @@
-#include <iostream>
+/*
+input: rectangle(length, width)
+process: calculate area of rectangle(length * area)
+output: 
+*/
 
+#include <iostream>
 using namespace std;
 
 double askArea();

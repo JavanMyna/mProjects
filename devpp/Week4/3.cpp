@@ -1,26 +1,32 @@
 // 3:21pm
 
 // hiring 18 to 28 years of age
-// input : current_year, userDOB
-// process: (userAge = current_year - userDOB) (if 28 > userAge > 18, then eligible )
+// input : current_year, userBirthYear
+// process: (userAge = current_year - userBirthYear) (if 28 > userAge > 18, then eligible )
 // output : userAge, eligible/not
+
+
+//OHHH I FREAKING MISUNDERSTOOD. I THOUGHT THEIR BIRTHDAY GILLAAAAA. 
+//easier way is to just use year. Current year - User's year. jeeeeez
+//My first mistake is writing it as DOB, its BIRTHYEAR BRO
+
 
 #include <iostream>
 using namespace std;
 
 int main() {
-    int current_year, userDOB, userAge;
+    int current_year, userBirthYear, userAge;
 
-    cout << "Enter the current year: ";
+    cout << "Enter the current year (eg: 2020): ";
     cin >> current_year;
 
-    cout << "Enter your date of birth in this format (YYMMDD): ";
-    cin >> userDOB;
+    cout << "Enter the year of your birthday: ";
+    cin >> userBirthYear;
 
-    userAge = current_year - (2000 + userDOB / 10000);
+    userAge = current_year - userBirthYear;
     cout << "You are " << userAge <<" years old." << endl;
 
-    if (18 <= userAge <= 28) {
+    if (userAge >= 18 && userAge <= 28) { //sometimes i forget they cant connect directly
         cout << "You are eligible for the job!" << endl;
     }
     else {

@@ -19,6 +19,7 @@ int main() {
 		cout << "Large number: " << num1 << endl;
 		cout << "Small number: " << num2 << endl;
 	}
+//Instead of printing directly, she assigns it to variable 'smaller' and 'larger' then prints them out at the end. Thats way smarterr
 
 	else if (num2 > num1) {
         cout << "\nLarge number: " << num2 << endl;
