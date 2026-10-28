@@ -23,8 +23,10 @@ mProjects/
 │   ├── Week1/               First programs: Hello World, name/city, pointers
 │   ├── Week2/               Modulo, integer division, static_cast, setw, rand
 │   ├── Week3/               Strings (substr/stoi), functions, multi-step math
+│   ├── Week4/               Conditionals: if/else ladders, &&/||, nested if, rand quiz
+│   ├── Week5/               Loops: accumulator, char/ASCII table (in progress)
 │   ├── sideQ/               Self-set programs: quite, 2fCalc, rectCalc,
-│   │                        miniATM, gradeChecker, numberMan, staticCas
+│   │                        miniATM, miniATM2, gradeChecker, numberMan, staticCas
 │   └── library/             Experiments: stitch (vector+string vs Python)
 ├── inactive/                Other languages, not currently active
 │   ├── py-like/             Python (simple greet, waka-waka output)

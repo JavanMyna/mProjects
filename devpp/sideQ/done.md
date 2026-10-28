@@ -1,6 +1,6 @@
 # side quests — done
 
-Files: `sideQ/` and `library/` (2026-09-29 → 2026-10-14). Not a week — stuff I built on my own while following the book.
+Files: `sideQ/` and `library/` (2026-09-29 → 2026-10-18). Not a week — stuff I built on my own while following the book.
 
 ## `sideQ/quite/quiteHi.cpp` — my own program (2026-09-29)
 
@@ -75,6 +75,18 @@ Fundamentals: `cin >>` into `int`, integer vs `double` division, laying a report
 - Intent, in the file's own comment: *"If I were to do Week3 3.cpp my own way"* — collect the digits in a list and stitch them back into one value instead of using `substr`.
 
 Fundamentals: `vector`, `push_back`, the range-based `for`, `to_string`, and the C++/Python correspondence.
+
+## `sideQ/miniATM2/main.cpp` — miniATM with loyalty points (2026-10-18)
+
+Rebuilt the ATM menu to practise `iomanip` and `static_cast`.
+
+- Same `while (true)` menu: 1 Check Balance, 2 Deposit, 3 Withdraw, 4 Exit; `break` on 4.
+- `deposit(balance)` returns the **new balance**; `withdraw(balance)` returns the **requested amount** (or `0` on invalid), and `main` subtracts it. Two different return conventions in one program.
+- Loyalty points: `pointsEarned = static_cast<int>(withdrawValue / 10);` — one point per RM10, fraction discarded; `points += pointsEarned` keeps the total.
+- Guards in `withdraw`: negative amount → *Invalid amount*, more than the balance → *Insufficient funds*; both return `0`, so no points are earned.
+- Ran it: `1` then `4` → `Balance: RM1000.00`, `Current Loyalty points: 0`. Withdraw `100`, then balance check → `RM900.00`, `Loyalty points earned: 10`, total `10`. Withdraw `2000` → insufficient-funds message, balance stays `RM1000.00`, earned `0`. Deposit `50` → `RM1050.00`.
+
+Fundamentals: menu loop, `break`, passing/returning `double`, `static_cast<int>` to discard the fraction, `fixed`/`setprecision(2)` for money.
 
 ## Notes
 
