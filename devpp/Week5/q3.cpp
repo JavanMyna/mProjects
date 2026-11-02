@@ -26,9 +26,6 @@ int main(){
  height=10;
  radius=5;
 
-
-double base, slanted;
-
 switch(type) {
     case 'a':
     case 'A':
@@ -55,8 +52,7 @@ switch(type) {
     cout << "Given prism "<< type<< " is Right Triangle Prism." << endl;
     cout << "Provided length: " << length << ", width: " << width << " and height: " << height << endl;
     
-    slanted = sqrt(pow(height, 2) + pow(width, 2));
-    area = width*length + height*length + 2*(0.5*(height*width)) + slanted*length; //it multiplies by lengthhhhh not width
+    area = width*length + height*length + 2*(0.5*(height*width)) + (sqrt(pow(height, 2) + pow(width, 2)))*length; //it multiplies by lengthhhhh not width
     volume = 0.5*(height*width)*length;
 
     cout << "The area of the right triangle prism is: " << fixed << setprecision(3) << area << endl;
@@ -69,10 +65,9 @@ switch(type) {
     cout << "Given prism "<< type<< " is Square-based Pyramid." << endl;
     cout << "Provided length: " << length << " and height: " << height << endl; 
 
-    base = pow(length, 2);
-    volume = ( base*height ) / 3;
-    slanted = 0.5 * length * sqrt(pow(height,2) + pow(length/2.0, 2));//since length is originally int, gotta make 2 into 2.0 
-    area = slanted*4 + base;
+    volume = ( (pow(length, 2))*height ) / 3;
+    //since length is originally int, gotta make 2 into 2.0 
+    area = ( 0.5 * length * sqrt(pow(height,2) + pow(length/2.0, 2)))*4 + pow(length, 2);
 
     cout << "The area of the pyramid is: " << fixed << setprecision(3) << area << endl;
     cout << "The volume of the pyramid is: " << fixed << setprecision(3) << volume << endl;

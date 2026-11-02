@@ -41,7 +41,7 @@ int main() {
             isRunning = false;
         }
 
-    }
+    }//my lecturer used a do-while here
 
     return 0;
 }//4:12pm 29oct26 im gonna eat panmee yey > Nope i didnt get panmee. Im gonna rewrite the script
