@@ -151,3 +151,35 @@ OKay if we use continue. Why cant we not use continue.
 
 Oh it skips the current loop huh. Thats crazy. Continue vs Break hmmm
 */
+
+// Hello there 4Nov26
+/*
+Whats a file access flags, whats it for either way
+
+whats trunc, truncate what. Oh if it exists, then it will delete the contents.
+dr said no need to ios::open, why ios::open either way.
+
+since its ios::, doesnt that mean we cant use using namespace std?
+otherwise the ios:: would get confused no?
+
+what can we try out to learn ts, maybe sumn from the lab file
+*/
+
+/*
+what if we put both ifstream and ofstream. does that make #include fstream?
+
+oh what the heck, theres also append in cpp. its ios::app . i didnt noticed
+
+I thought << fixed is only so we get the 0 being existent. But apparently its also a way to avoid scientific number with the "E" thingy
+no lah, showpoint can use if you want it to show trailing zero until whole number is 6 digits i fu dont wanna use iomanip
+*/
+
+//So whats eof even for.
+/*
+getline(cin, word) is it. 
+
+i wonder how my python game looked like back then
+
+whats a delimiter like '$' for whattt. or '\t',
+getline(filename, input, delimiter)
+*/
