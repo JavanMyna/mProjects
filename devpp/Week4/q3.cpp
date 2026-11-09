@@ -7,7 +7,7 @@ int main(){
 	string grade;
 
     grade= "";
-    mark = 33;
+    mark = 33; 
         
     // fill your answer in the answer box    
     if (mark >= 80 && mark <= 100) {
