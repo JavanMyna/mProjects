@@ -1,0 +1,4 @@
+Harry Potter	45.90	12
+The Little Prince	22.50	5
+Atomic Habits	38.00	20
+Rich Dad Poor Dad	29.90	7
