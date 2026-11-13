@@ -12,17 +12,19 @@ int main() {
 // green 30 secs> yellow > red
 
 int longest_wait = 0;
-int t_long;//(gotta compare)
+int t_long; //(gotta compare)
 double waitAvg; //(add all waiting time, if red until green)
 int g_count = 0;
 int car = 0;
+int car_wait = 0;
 int wait;
 int waitSum=0;
 int duration = green + red + yellow;
+int tref;
 
 //so green starts from 0-30, yellow from 30-35, red from 35-60. 
 
-if (green<0 || yellow<0 || red<0) {
+if (green<=0 || yellow<=0 || red<=0) {
     cout << "Invalid light timings." << endl;
     return 1;
 }
@@ -33,38 +35,48 @@ while (t!=-1 ) {
     if (t<0 && t!=-1) {
         cout << "Invalid time skipped." << endl;
     } else {
+        tref = t;
+        if (t==-1) continue;
         while (t>=duration) t-=duration;
         //thinking of adding while here, just so we can cut the duration
-        cout << "t=" << t;
+        cout << "t=" << tref;
         if (t < (green)) {
             cout << ": GREEN, go";
             g_count++;
         } else if (t < (green + yellow)) {
             wait = duration - t;
-            cout << ": YELLOW" << wait;
+            cout << ": YELLOW, wait " << wait << " s";
             if (longest_wait<wait) {
                 longest_wait = wait;
-                t_long = t;
+                t_long = tref;
             }
             waitSum += wait;
+            car_wait++;
         } else if (t < (green + yellow + red)) {
             wait = duration - t;
             cout << ": RED, wait " << wait << " s";
             if (longest_wait<wait) {
                 longest_wait = wait;
-                t_long = t;
+                t_long = tref;
             }
             waitSum += wait;    
+            car_wait++;
         }
         car++;
         cout << endl;
     }
 }
-waitAvg = waitSum/car;
-cout << "Cars: " << car << endl;
-cout << "Average wait: " << fixed << setprecision(2) << waitAvg << " s" << endl;
-cout << "Longest wait: " << longest_wait << " s (car at t=" << t_long << ")" << endl;
-cout << "Cars that did not wait: " << g_count << endl;
+
+if (car<=0) {
+    cout << "No cars." << endl;
+} else {
+    waitAvg = static_cast<double>(waitSum)/car;
+    cout << "Cars: " << car << endl;
+    cout << "Average wait: " << fixed << setprecision(2) << waitAvg << " s" << endl;
+    cout << "Longest wait: " << longest_wait << " s (car at t=" << t_long << ")" << endl;
+    cout << "Cars that did not wait: " << g_count << endl;
+}
 
     return 0;
 }
+//my waitSum might fucked up tho so maybe lets trace? >> found out its because not all cars actually waited
