@@ -17,7 +17,7 @@ double waitAvg; //(add all waiting time, if red until green)
 int g_count = 0;
 int car = 0;
 int wait;
-int waitSum;
+int waitSum=0;
 int duration = green + red + yellow;
 
 //so green starts from 0-30, yellow from 30-35, red from 35-60. 
@@ -33,7 +33,7 @@ while (t!=-1 ) {
     if (t<0 && t!=-1) {
         cout << "Invalid time skipped." << endl;
     } else {
-        if (t>=duration)
+        while (t>=duration) t-=duration;
         //thinking of adding while here, just so we can cut the duration
         cout << "t=" << t;
         if (t < (green)) {
